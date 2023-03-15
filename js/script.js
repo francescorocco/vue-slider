@@ -51,10 +51,19 @@ createApp({
         },
         clickActiveImage(newActiveImage){
             this.activeImage = newActiveImage;
-        }
+        },
+        hoverClearInterval(){
+            clearInterval(cicleImage);
+        },
+        // cicleImageStart(){
+        //     setInterval(() => {
+        //     this.buttonNext()
+        // },3000)
+        // } 
     },
     mounted(){
-        setInterval(() => {
+        cicleImage = setInterval(() => {
             this.buttonNext()
-    },3000)}
+        },3000)}
+
 }).mount('#app')
