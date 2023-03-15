@@ -48,6 +48,9 @@ createApp({
             if(this.activeImage == index){
                 return 'active';
             }
+        },
+        clickActiveImage(newActiveImage){
+            this.activeImage = newActiveImage;
         }
 
 
