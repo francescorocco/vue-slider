@@ -5,7 +5,7 @@ createApp({
   data() {
         return {
             activeImage:0,
-            
+
             slides: [
             {
                 image: 'img/01.webp',
@@ -30,5 +30,22 @@ createApp({
             }
             ],
         }
-  }
+    },
+    methods:{
+        buttonNext(){
+            this.activeImage++;
+            if(this.activeImage == this.slides.length){
+                this.activeImage = 0;
+            }
+        },
+        buttonPrev(){
+            this.activeImage--;
+            if(this.activeImage == 0){
+                this.activeImage = this.slides.length -1;
+            }
+        }
+
+
+
+    }
 }).mount('#app')
