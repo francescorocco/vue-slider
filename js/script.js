@@ -40,8 +40,13 @@ createApp({
         },
         buttonPrev(){
             this.activeImage--;
-            if(this.activeImage == 0){
+            if(this.activeImage < 0){
                 this.activeImage = this.slides.length -1;
+            }
+        },
+        activeThumbImage(index){
+            if(this.activeImage == index){
+                return 'active';
             }
         }
 
